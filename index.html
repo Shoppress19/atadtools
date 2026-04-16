@@ -2,80 +2,43 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Bricolati | بـريكـولاتي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bricolati | بريكولاتي</title>
     <style>
-        :root { --primary: #ff5722; --dark: #0a0a0a; --card: #1a1a1a; --text: #eee; }
-        * { box-sizing: border-box; }
-        body { font-family: sans-serif; background: var(--dark); color: var(--text); margin: 0; transition: 0.5s; }
-        
-        header { background: #000; padding: 15px; display: flex; align-items: center; border-bottom: 2px solid var(--primary); position: sticky; top: 0; z-index: 100; }
-        .open-btn { font-size: 25px; cursor: pointer; color: var(--primary); background: none; border: none; margin-left: 15px; }
-        header h1 { margin: 0; font-size: 1.3rem; flex-grow: 1; text-align: center; color: var(--primary); }
-
-        .sidebar { height: 100%; width: 0; position: fixed; z-index: 1000; top: 0; right: 0; background: #111; overflow-x: hidden; transition: 0.4s; padding-top: 20px; border-left: 1px solid var(--primary); }
-        .sidebar-logo { text-align: center; padding: 20px; border-bottom: 1px solid #333; margin-bottom: 10px; }
-        .sidebar-logo img { height: 60px; border-radius: 10px; }
-        .sidebar a { padding: 15px 25px; text-decoration: none; font-size: 1.1rem; color: #fff; display: block; border-bottom: 1px solid #222; }
-        .sidebar a:hover { background: var(--primary); }
-        .sidebar .close-btn { position: absolute; top: 10px; left: 20px; font-size: 30px; color: var(--primary); cursor: pointer; }
-
-        .container { padding: 20px; max-width: 600px; margin: auto; }
-        .hero-img { width: 100%; border-radius: 15px; margin-bottom: 20px; border: 1px solid #333; display: block; }
-        .welcome-box { background: linear-gradient(135deg, #1a1a1a, #000); border-radius: 15px; padding: 25px; text-align: center; border: 1px solid #333; margin-bottom: 25px; }
-        .card { background: var(--card); border-radius: 12px; padding: 15px; margin-bottom: 20px; border-right: 5px solid var(--primary); display: block; text-decoration: none; color: inherit; transition: 0.3s; }
-        .card:hover { background: #222; }
-        .card h2 { color: var(--primary); margin: 0 0 10px 0; font-size: 1.1rem; }
-        
-        footer { text-align: center; padding: 20px; color: #555; font-size: 0.8rem; }
+        body { background-color: #0b0b0b; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 15px; }
+        header { display: flex; justify-content: center; align-items: center; padding: 20px 0; }
+        .bricolati-logo svg { filter: drop-shadow(0 0 8px rgba(255, 102, 0, 0.5)); animation: pulse 3s infinite ease-in-out; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); filter: drop-shadow(0 0 15px rgba(255, 102, 0, 0.8)); } }
+        .hero-section { background: #1a1a1a; border-bottom: 4px solid #FF6600; border-radius: 15px; padding: 30px 20px; text-align: center; margin-bottom: 25px; }
+        .hero-section h1 { color: #FF6600; margin: 0 0 10px 0; }
+        .card { background-color: #1a1a1a; border-radius: 12px; padding: 20px; margin-bottom: 20px; border-right: 5px solid #FF6600; }
+        .card h2 { color: #FF6600; font-size: 18px; margin: 0 0 10px 0; }
+        .card p { color: #bbb; font-size: 14px; line-height: 1.6; margin: 0; }
     </style>
 </head>
 <body>
-
-<div id="mySidebar" class="sidebar">
-    <span class="close-btn" onclick="closeNav()">×</span>
-    <div class="sidebar-logo">
-        <img src="1000029020.jpg" alt="Bricolati">
-    </div>
-    <a href="index.html">🏠 الرئيسية</a>
-    <a href="battery-tips.html">🔋 صيانة البطاريات</a>
-    <a href="tools-review.html">🛠️ مراجعة الأدوات</a>
-    <a href="about.html">👨‍🔧 من نحن</a>
-    <a href="contact.html">📞 اتصل بنا</a>
-</div>
-
 <header>
-    <button class="open-btn" onclick="openNav()">☰</button>
-    <h1>بـريكـولاتي | Bricolati</h1>
-</header>
-
-<div class="container" id="main">
-    <img src="1000029030.jpg" alt="فريق بـريكـولاتي" class="hero-img">
-
-    <div class="welcome-box">
-        <h2 style="color:var(--primary); margin:0;">خبير الصيانة في الدروة</h2>
-        <p>مرحباً بك في المنصة الرسمية لتعليم صيانة الإلكترونيات وتسوق أفضل الأدوات.</p>
+    <div class="bricolati-logo">
+        <svg width="200" height="60" viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="25" fill="none" stroke="#FF6600" stroke-width="2"/>
+            <path d="M22 38L38 22M26 22L22 26M38 34L34 38" stroke="#FF6600" stroke-width="3" stroke-linecap="round"/>
+            <path d="M30 15L27 30H33L30 45" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+            <text x="70" y="28" font-family="Arial" font-weight="bold" font-size="22" fill="#FF6600">Bricolati</text>
+            <text x="70" y="52" font-family="Arial" font-size="18" fill="#FFFFFF">بريكولاتي</text>
+        </svg>
     </div>
-
-    <a href="battery-tips.html" class="card">
-        <h2>أسرار بطاريات الليثيوم</h2>
-        <p>تعلم الطريقة الصحيحة لشحن وصيانة بطاريات الدريل والمعدات...</p>
-    </a>
-
-    <a href="tools-review.html" class="card">
-        <h2>أدوات AliExpress الموصى بها</h2>
-        <p>قائمة بأفضل المعدات التي قمنا بتجربتها في ورشتنا لعام 2026...</p>
-    </a>
+</header>
+<div class="hero-section">
+    <h1>خبير الصيانة في الدروة</h1>
+    <p>مرحباً بك في المنصة الرسمية لتعليم صيانة الإلكترونيات وتسوق أفضل الأدوات لعام 2026.</p>
 </div>
-
-<footer>
-    © 2026 Bricolati - جميع الحقوق محفوظة
-</footer>
-
-<script>
-function openNav() { document.getElementById("mySidebar").style.width = "250px"; }
-function closeNav() { document.getElementById("mySidebar").style.width = "0"; }
-</script>
-
+<div class="card">
+    <h2>أسرار بطاريات الليثيوم</h2>
+    <p>تعلم الطريقة الصحيحة لشحن وصيانة بطاريات الدريل والمعدات لضمان أطول عمر افتراضي...</p>
+</div>
+<div class="card">
+    <h2>أدوات AliExpress الموصى بها</h2>
+    <p>قائمة بأفضل المعدات التي قمنا بتجربتها في ورشتنا، مختارة بعناية لضمان الجودة والسعر.</p>
+</div>
 </body>
 </html>

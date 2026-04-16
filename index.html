@@ -3,35 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بـريكـولاتي - صيانة الأجهزة</title>
+    <title>ورشة الصيانة - الدروة</title>
     <style>
-        body { font-family: sans-serif; background: #121212; color: white; text-align: center; margin: 0; padding: 0; }
-        .header { background: #1e1e1e; padding: 25px; border-bottom: 4px solid #ff5722; }
-        .container { padding: 20px; }
-        .video-card { background: #1e1e1e; padding: 15px; border-radius: 20px; border: 2px solid #333; max-width: 400px; margin: 20px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .thumb-container { position: relative; display: inline-block; width: 100%; }
-        .thumb-img { width: 100%; border-radius: 15px; border: 1px solid #ff5722; }
-        .play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 87, 34, 0.9); color: white; padding: 12px 20px; border-radius: 50px; font-weight: bold; }
-        .btn-blog { display: inline-block; margin-top: 30px; color: #ff5722; text-decoration: none; border: 1px solid #ff5722; padding: 10px 25px; border-radius: 10px; }
+        body { font-family: Arial, sans-serif; background-color: #1a1a1a; color: white; text-align: center; padding: 20px; }
+        .card { background: #252525; padding: 20px; border-radius: 15px; border: 2px solid #ff5722; max-width: 400px; margin: auto; }
+        .video-link { display: block; position: relative; text-decoration: none; }
+        .video-link img { width: 100%; border-radius: 10px; }
+        .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,87,34,0.9); color: white; padding: 10px 20px; border-radius: 50px; font-weight: bold; }
+        .btn-blog { display: inline-block; margin-top: 20px; background: #ff5722; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🛠️ ورشة بـريكـولاتي للصيانة</h1>
+    <h1>🛠️ ورشة بـريكـولاتي للصيانة</h1>
+    <div class="card">
+        <h3>🎥 فيديو شرح الصيانة</h3>
+        <p>اضغط على الصورة لمشاهدة الفيديو</p>
+        <a href="https://www.youtube.com/watch?v=Isc8qA63L-Q" target="_blank" class="video-link">
+            <img src="https://img.youtube.com/vi/Isc8qA63L-Q/hqdefault.jpg">
+            <div class="play-btn">▶ تشغيل الآن</div>
+        </a>
     </div>
-    <div class="container">
-        <div class="video-card">
-            <h3 style="color: #ff5722;">🎞️ شاهد فيديو الصيانة</h3>
-            <p>اضغط على الصورة لمشاهدة الشرح على يوتيوب</p>
-            <a href="https://www.youtube.com/watch?v=Isc8qA63L-Q" target="_blank" style="text-decoration: none;">
-                <div class="thumb-container">
-                    <img src="https://img.youtube.com/vi/Isc8qA63L-Q/maxresdefault.jpg" class="thumb-img">
-                    <div class="play-overlay">▶ تشغيل الآن</div>
-                </div>
-            </a>
-        </div>
-        
-        <a href="blog.html" class="btn-blog">📑 اقرأ النصائح التقنية (المدونة)</a>
-    </div>
+    <a href="blog.html" class="btn-blog">📑 الدخول للمدونة (المقالات)</a>
 </body>
 </html>

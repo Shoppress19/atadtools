@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بـريكـولاتي للصيانة</title>
     <style>
-        body { font-family: sans-serif; background: #121212; color: white; text-align: center; padding: 0; margin: 0; }
-        .main-card { background: #1e1e1e; margin: 20px auto; padding: 20px; border-radius: 25px; border: 2px solid #ff5722; max-width: 400px; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
-        .video-thumb { width: 100%; border-radius: 15px; cursor: pointer; border: 1px solid #444; }
-        .play-button { background: #ff5722; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 15px; font-weight: bold; font-size: 1.1rem; }
-        .blog-link { color: #aaa; text-decoration: none; display: block; margin-top: 25px; font-size: 0.9rem; }
+        body { font-family: sans-serif; background: #121212; color: white; text-align: center; margin: 0; padding: 0; }
+        .hero { background: #1e1e1e; padding: 30px; border-bottom: 5px solid #ff5722; }
+        .video-card { background: #252525; margin: 25px auto; padding: 15px; border-radius: 25px; border: 2px solid #ff5722; max-width: 420px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); }
+        .thumb { width: 100%; border-radius: 15px; border: 1px solid #444; }
+        .play-btn { background: #ff5722; color: white; padding: 18px 35px; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: bold; font-size: 1.2rem; transition: 0.3s; }
+        .play-btn:active { transform: scale(0.95); }
     </style>
 </head>
 <body>
-    <div style="background:#ff5722; padding: 15px; font-weight: bold; font-size: 1.4rem;">🛠️ بـريكـولاتي (Bricolati)</div>
-    
-    <div class="main-card">
-        <h2 style="color:#ff5722; margin-top:0;">🎥 شرح صيانة الدريل</h2>
-        <p>اضغط على الزر أدناه لمشاهدة الفيديو مباشرة على يوتيوب وتجنب أعطال المشغل</p>
-        
-        <img src="https://img.youtube.com/vi/Isc8qA63L-Q/hqdefault.jpg" class="video-thumb">
-        
-        <a href="https://www.youtube.com/watch?v=Isc8qA63L-Q" target="_blank" class="play-button">▶ فتح الفيديو الآن</a>
-        
-        <a href="blog.html" class="blog-link">📑 تصفح مقالات الصيانة في المدونة</a>
+    <div class="hero"><h1>🛠️ ورشة بـريكـولاتي</h1></div>
+    <div class="video-card">
+        <h2 style="color:#ff5722;">🎞️ شاهد فيديو الصيانة</h2>
+        <p>بسبب قيود يوتيوب، اضغط أدناه للمشاهدة مباشرة</p>
+        <img src="https://img.youtube.com/vi/Isc8qA63L-Q/maxresdefault.jpg" class="thumb">
+        <a href="https://www.youtube.com/watch?v=Isc8qA63L-Q" target="_blank" class="play-btn">▶ تشغيل الفيديو الآن</a>
     </div>
+    <br>
+    <a href="blog.html" style="color: #ff5722; text-decoration: none; font-weight: bold;">📑 انتقل للمقالات التقنية</a>
 </body>
 </html>

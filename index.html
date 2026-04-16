@@ -9,24 +9,23 @@
         * { box-sizing: border-box; }
         body { font-family: sans-serif; background: var(--dark); color: var(--text); margin: 0; transition: 0.5s; }
         
-        /* الهيدر */
-        header { background: #000; padding: 15px; display: flex; align-items: center; border-bottom: 2px solid var(--primary); sticky: top; }
+        header { background: #000; padding: 15px; display: flex; align-items: center; border-bottom: 2px solid var(--primary); position: sticky; top: 0; z-index: 100; }
         .open-btn { font-size: 25px; cursor: pointer; color: var(--primary); background: none; border: none; margin-left: 15px; }
         header h1 { margin: 0; font-size: 1.3rem; flex-grow: 1; text-align: center; color: var(--primary); }
 
-        /* القائمة الجانبية */
-        .sidebar { height: 100%; width: 0; position: fixed; z-index: 1000; top: 0; right: 0; background: #111; overflow-x: hidden; transition: 0.4s; padding-top: 60px; border-left: 1px solid var(--primary); }
+        .sidebar { height: 100%; width: 0; position: fixed; z-index: 1000; top: 0; right: 0; background: #111; overflow-x: hidden; transition: 0.4s; padding-top: 20px; border-left: 1px solid var(--primary); }
+        .sidebar-logo { text-align: center; padding: 20px; border-bottom: 1px solid #333; margin-bottom: 10px; }
+        .sidebar-logo img { height: 60px; border-radius: 10px; }
         .sidebar a { padding: 15px 25px; text-decoration: none; font-size: 1.1rem; color: #fff; display: block; border-bottom: 1px solid #222; }
         .sidebar a:hover { background: var(--primary); }
         .sidebar .close-btn { position: absolute; top: 10px; left: 20px; font-size: 30px; color: var(--primary); cursor: pointer; }
 
-        /* المحتوى */
         .container { padding: 20px; max-width: 600px; margin: auto; }
+        .hero-img { width: 100%; border-radius: 15px; margin-bottom: 20px; border: 1px solid #333; display: block; }
         .welcome-box { background: linear-gradient(135deg, #1a1a1a, #000); border-radius: 15px; padding: 25px; text-align: center; border: 1px solid #333; margin-bottom: 25px; }
         .card { background: var(--card); border-radius: 12px; padding: 15px; margin-bottom: 20px; border-right: 5px solid var(--primary); display: block; text-decoration: none; color: inherit; transition: 0.3s; }
-        .card:active { transform: scale(0.97); }
+        .card:hover { background: #222; }
         .card h2 { color: var(--primary); margin: 0 0 10px 0; font-size: 1.1rem; }
-        .card p { margin: 0; font-size: 0.9rem; color: #bbb; }
         
         footer { text-align: center; padding: 20px; color: #555; font-size: 0.8rem; }
     </style>
@@ -35,6 +34,9 @@
 
 <div id="mySidebar" class="sidebar">
     <span class="close-btn" onclick="closeNav()">×</span>
+    <div class="sidebar-logo">
+        <img src="img/logo.png" alt="Bricolati">
+    </div>
     <a href="index.html">🏠 الرئيسية</a>
     <a href="battery-tips.html">🔋 صيانة البطاريات</a>
     <a href="tools-review.html">🛠️ مراجعة الأدوات</a>
@@ -48,6 +50,8 @@
 </header>
 
 <div class="container" id="main">
+    <img src="img/team.jpg" alt="فريق بـريكـولاتي" class="hero-img">
+
     <div class="welcome-box">
         <h2 style="color:var(--primary); margin:0;">خبير الصيانة في الدروة</h2>
         <p>مرحباً بك في المنصة الرسمية لتعليم صيانة الإلكترونيات وتسوق أفضل الأدوات.</p>

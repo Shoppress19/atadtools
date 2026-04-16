@@ -3,33 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدونة بـريكـولاتي - صيانة الأدوات الكهربائية</title>
+    <meta name="description" content="مدونة بـريكـولاتي المتخصصة في صيانة الأدوات الكهربائية والالكترونية بالدروة.">
+    <title>بـريكـولاتي - المدونة المتكاملة</title>
     <style>
-        body { font-family: sans-serif; background: #000; color: #fff; margin: 0; padding: 0; }
-        header { background: #ff5722; padding: 20px; text-align: center; font-size: 1.8rem; font-weight: bold; }
-        .container { padding: 20px; max-width: 800px; margin: auto; }
-        .post { background: #111; border: 1px solid #ff5722; border-radius: 15px; padding: 20px; margin-bottom: 20px; }
-        .post h2 { color: #ff5722; margin-top: 0; }
-        .post p { line-height: 1.6; color: #ccc; }
-        .tag { background: #333; color: #ff5722; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; display: inline-block; margin-bottom: 10px; }
-        footer { text-align: center; padding: 20px; color: #666; font-size: 0.9rem; }
+        :root { --orange: #ff5722; --black: #000; --dark-grey: #111; --text: #ccc; }
+        body { font-family: sans-serif; background: var(--black); color: #fff; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: var(--orange); padding: 25px; text-align: center; font-size: 2rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        nav { background: var(--dark-grey); padding: 10px; text-align: center; border-bottom: 1px solid var(--orange); }
+        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        .container { padding: 20px; max-width: 900px; margin: auto; flex: 1; }
+        .post-card { background: var(--dark-grey); border-radius: 15px; padding: 20px; margin-bottom: 25px; border-right: 5px solid var(--orange); }
+        .post-card h2 { color: var(--orange); margin-top: 0; }
+        footer { background: var(--dark-grey); padding: 30px 20px; text-align: center; border-top: 2px solid var(--orange); margin-top: 40px; }
+        .footer-links { margin-bottom: 15px; }
+        .footer-links a { color: var(--text); text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--orange); }
+        .copyright { color: #666; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <header>🛠️ مدونة بـريكـولاتي (Bricolati)</header>
-    <div class="container">
-        <div class="post">
-            <span class="tag">صيانة الدريل</span>
-            <h2>كيفية الحفاظ على بطارية الدريل لفترة أطول</h2>
-            <p>نصيحة اليوم من ورشة بـريكـولاتي: تجنب تفريغ البطارية تماماً قبل الشحن، فهذا يطيل عمر الخلايا الكيميائية ويحافظ على قوة الجهاز عند العمل الشاق...</p>
-        </div>
 
-        <div class="post">
-            <span class="tag">إصلاح الشواحن</span>
-            <h2>تشخيص أعطال شواحن البطاريات السريعة</h2>
-            <p>الكثير من الزبائن يظنون أن الشاحن احترق، بينما المشكلة غالباً ما تكون في الفيوز الداخلي أو تراكم الغبار على نقاط التلامس. في هذه التدوينة نشرح كيف تكتشف العطل بنفسك...</p>
-        </div>
+<header>🛠️ بـريكـولاتي - Bricolati</header>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="contact.html">اتصل بنا</a>
+</nav>
+
+<div class="container">
+    <div class="post-card">
+        <h2>أحدث المقالات التقنية</h2>
+        <p>مرحباً بك في مدونة بـريكـولاتي. هنا نشاركك خبرة سنوات في صيانة الأدوات الكهربائية وإصلاح البطاريات بطرق علمية وصحيحة.</p>
     </div>
-    <footer>© 2026 بـريكـولاتي - جميع الحقوق محفوظة - الدروة، المغرب</footer>
+    
+    <div class="post-card">
+        <h2>صيانة أدوات AliExpress: الدليل الشامل</h2>
+        <p>كيف تختار الأدوات المناسبة من AliExpress وكيف تقوم بصيانتها دورياً لضمان عمر أطول...</p>
+        <small>التاجات: #صيانة #AliExpress #إلكترونيات #بطاريات #أدوات</small>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">من نحن</a> | 
+        <a href="privacy.html">سياسة الخصوصية</a> | 
+        <a href="terms.html">الشروط والقوانين</a> | 
+        <a href="contact.html">اتصل بنا</a>
+    </div>
+    <div class="copyright">
+        جميع الحقوق محفوظة © 2026 بـريكـولاتي - ورشة الدروة الرقمية
+    </div>
+</footer>
+
 </body>
 </html>

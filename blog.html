@@ -2,31 +2,55 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>مدونة عتاد تول - نصائح الإصلاح</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة بريكولاتي - أسرار الصيانة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-        header { background: #333; color: white; padding: 10px; text-align: center; }
-        .post { border-bottom: 1px solid #ccc; padding: 10px 0; }
-        a { color: #d35400; text-decoration: none; }
+        :root { --primary: #ff5722; --dark: #121212; --card: #1e1e1e; --text: #e0e0e0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: var(--text); margin: 0; line-height: 1.6; }
+        .header { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; padding: 60px 20px; text-align: center; border-bottom: 4px solid var(--primary); }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .post-card { background: var(--card); border-radius: 15px; overflow: hidden; margin-bottom: 30px; border: 1px solid #333; transition: 0.3s; }
+        .post-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .post-content { padding: 20px; }
+        .post-tag { background: var(--primary); color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+        h2 { color: white; margin-top: 15px; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-weight: bold; }
+        .footer { text-align: center; padding: 40px; color: #777; font-size: 14px; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>مدونة بريكولاتي (Bricolati)</h1>
-        <p>تعلم كيف تحافظ على أدواتك الكهربائية</p>
-    </header>
-    
-    <div class="post">
-        <h2>كيف تحافظ على بطارية الدريل (Drill) لفترة أطول؟</h2>
-        <p>النصيحة الأولى هي عدم ترك البطارية فارغة تماماً لفترة طويلة...</p>
+
+    <div class="header">
+        <h1>📑 مدونة بريكولاتي التقنية</h1>
+        <p>نتشارك معكم خبرة سنوات في إصلاح المعدات الكهربائية</p>
     </div>
 
-    <div class="post">
-        <h2>الفرق بين محركات الكربون (Brushed) والـ Brushless</h2>
-        <p>في هذا المقال سنتحدث عن كفاءة المحركات الحديثة في أجهزة Makita...</p>
+    <div class="container">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+
+        <article class="post-card">
+            <div class="post-content">
+                <span class="post-tag">صيانة البطاريات</span>
+                <h2>كيف تضاعف عمر بطارية "الليثيوم" لدريل بوش (Bosch)؟</h2>
+                <p>كثير من الحرفيين يرتكبون خطأ ترك البطارية في الشاحن طوال الليل. في هذا المقال نشرح لك الطريقة الصحيحة لشحن خلايا 18650 وحمايتها من التلف المبكر...</p>
+                <a href="#" style="color: var(--primary); text-decoration: none; font-weight: bold;">اقرأ المزيد...</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-content">
+                <span class="post-tag">أعطال المحركات</span>
+                <h2>علامات تدل على احتراق "Charbons" (الفحمات) في محرك ماكيتا</h2>
+                <p>إذا لاحظت شرارات زرقاء قوية أو تقطع في الدوران، فقد حان الوقت لتغيير الفحمات. لا تنتظر حتى يتلف الـ Collector بالكامل...</p>
+                <a href="#" style="color: var(--primary); text-decoration: none; font-weight: bold;">اقرأ المزيد...</a>
+            </div>
+        </article>
     </div>
 
-    <br>
-    <a href="index.html">العودة للصفحة الرئيسية</a>
+    <div class="footer">
+        جميع الحقوق محفوظة © بريكولاتي 2026 - خبيرك في الدروة
+    </div>
+
 </body>
 </html>

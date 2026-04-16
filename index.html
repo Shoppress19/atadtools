@@ -3,92 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AtadTools | المخزون الدائم</title>
+    <title>Bricolati | فيديوهات الصيانة</title>
     <style>
-        body { font-family: sans-serif; background: #1a1a1a; color: white; text-align: center; margin:0; }
-        nav { background: #333; padding: 15px; border-bottom: 2px solid #007bff; display: flex; justify-content: center; gap: 20px; }
-        nav a { color: #ccc; text-decoration: none; font-weight: bold; }
-        .container { padding: 20px; }
-        input { padding: 12px; margin: 10px; border-radius: 8px; border: none; width: 80%; font-size: 16px; }
-        button.add-btn { padding: 12px 25px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; width: 85%; }
-        .item { background: #262626; padding: 15px; margin: 12px auto; border-radius: 12px; width: 90%; display: flex; justify-content: space-between; align-items: center; border: 1px solid #444; }
-        .wa-btn { background: #25D366; color: white; padding: 8px 12px; text-decoration: none; border-radius: 6px; font-size: 14px; }
-        .del-btn { background: #ff4444; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+        body { font-family: sans-serif; background: #121212; color: #e0e0e0; margin: 0; padding: 0; }
+        nav { background: #1f1f1f; padding: 15px; text-align: center; border-bottom: 3px solid #28a745; display: flex; justify-content: center; gap: 20px; }
+        nav a { color: #aaa; text-decoration: none; font-weight: bold; }
+        .active { color: white !important; }
+        
+        .header { padding: 30px; text-align: center; background: #1f1f1f; }
+        .header h1 { color: #28a745; margin: 0; }
+        
+        .video-container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .video-card { background: #1f1f1f; border-radius: 12px; overflow: hidden; border: 1px solid #333; }
+        .video-card iframe, .video-card video { width: 100%; aspect-ratio: 16/9; border: none; }
+        .video-info { padding: 15px; }
+        .video-info h3 { margin: 0; color: #fff; font-size: 18px; }
+        .video-info p { color: #bbb; font-size: 14px; margin-top: 8px; }
     </style>
 </head>
-<body onload="loadTools()">
+<body>
+<nav style="text-align:center; padding:15px; background:#2c3e50;"><a href="blog.html" style="color:white; text-decoration:none; font-weight:bold;">📑 دخول المدونة (نصائح الإصلاح)</a></nav>
 
 <nav>
     <a href="index.html">🛠️ عتاد تول</a>
-    <a href="bricolati.html">💡 بريكولاتي</a>
+    <a href="bricolati.html" class="active">💡 بريكولاتي</a>
 </nav>
 
-<div class="container">
-    <h2 style="color: #007bff;">المخزون الدائم</h2>
-    <input type="text" id="toolName" placeholder="اسم الأداة">
-    <input type="number" id="toolPrice" placeholder="الثمن بالدرهم">
-    <br>
-    <button class="add-btn" onclick="addTool()">حفظ في المخزون</button>
-
-    <div id="inventory" style="margin-top: 30px;"></div>
+<div class="header">
+    <h1>معرض فيديوهات الصيانة</h1>
+    <p>شاهد كيف نعيد الحياة لأجهزتك</p>
 </div>
 
-<script>
-// وظيفة لإضافة أداة وحفظها
-function addTool() {
-    const name = document.getElementById('toolName').value;
-    const price = document.getElementById('toolPrice').value;
-    
-    if(name && price) {
-        const tool = { name, price };
-        let tools = JSON.parse(localStorage.getItem('myTools')) || [];
-        tools.push(tool);
-        localStorage.setItem('myTools', JSON.stringify(tools));
-        
-        displayTools();
-        document.getElementById('toolName').value = '';
-        document.getElementById('toolPrice').value = '';
-    }
-}
+<div class="video-container">
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        <div class="video-info">
+            <h3>صيانة محرك Makita</h3>
+            <p>فيديو يوضح طريقة تغيير الـ MOSFET وفحص الدائرة الكهربائية.</p>
+        </div>
+    </div>
 
-// وظيفة لعرض الأدوات المحفوظة
-function displayTools() {
-    const inventory = document.getElementById('inventory');
-    inventory.innerHTML = '';
-    let tools = JSON.parse(localStorage.getItem('myTools')) || [];
-    
-    tools.forEach((tool, index) => {
-        const div = document.createElement('div');
-        div.className = 'item';
-        const waLink = `https://wa.me/?text=${encodeURIComponent('استفسار عن: ' + tool.name + ' - السعر: ' + tool.price + ' درهم')}`;
-        
-        div.innerHTML = `
-            <div style="text-align: right;">
-                <strong>${tool.name}</strong><br>
-                <span style="color:#007bff">${tool.price} درهم</span>
-            </div>
-            <div>
-                <a href="${waLink}" target="_blank" class="wa-btn">واتساب</a>
-                <button onclick="deleteTool(${index})" class="del-btn">حذف</button>
-            </div>
-        `;
-        inventory.appendChild(div);
-    });
-}
+    <div class="video-card">
+        <video controls>
+            <source src="repair_video.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+        <div class="video-info">
+            <h3>إصلاح بطارية Bosch</h3>
+            <p>تغيير خلايا الليثيوم وإعادة برمجة لوحة الشحن (BMS).</p>
+        </div>
+    </div>
+</div>
 
-// وظيفة لحذف أداة من الذاكرة
-function deleteTool(index) {
-    let tools = JSON.parse(localStorage.getItem('myTools')) || [];
-    tools.splice(index, 1);
-    localStorage.setItem('myTools', JSON.stringify(tools));
-    displayTools();
-}
+<div style="text-align: center; padding: 30px;">
+    <a href="index.html" style="color: #28a745; text-decoration: none; font-weight: bold;">← العودة للمخزون</a>
+</div>
 
-// تحميل الأدوات عند فتح الصفحة
-function loadTools() {
-    displayTools();
-}
-</script>
 </body>
 </html>
-

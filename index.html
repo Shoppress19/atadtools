@@ -3,27 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="مدونة بـريكـولاتي المتخصصة في صيانة الأدوات الكهربائية والالكترونية بالدروة.">
-    <title>بـريكـولاتي | خبير صيانة الأدوات الكهربائية والبطاريات</title>
+    <title>بـريكـولاتي | خبير صيانة الأدوات والبطاريات</title>
     <style>
-        :root { --orange: #ff5722; --black: #000; --dark-grey: #111; --text: #ccc; }
-        body { font-family: sans-serif; background: var(--black); color: #fff; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
-        header { background: var(--orange); padding: 25px; text-align: center; font-size: 2rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-        nav { background: var(--dark-grey); padding: 10px; text-align: center; border-bottom: 1px solid var(--orange); }
+        body { font-family: sans-serif; background: #000; color: #fff; margin: 0; padding: 0; }
+        header { background: #ff5722; padding: 20px; text-align: center; font-size: 1.8rem; font-weight: bold; }
+        nav { background: #111; padding: 10px; text-align: center; border-bottom: 2px solid #ff5722; }
         nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        .container { padding: 20px; max-width: 900px; margin: auto; flex: 1; }
-        .post-card { background: var(--dark-grey); border-radius: 15px; padding: 20px; margin-bottom: 25px; border-right: 5px solid var(--orange); }
-        .post-card h2 { color: var(--orange); margin-top: 0; }
-        footer { background: var(--dark-grey); padding: 30px 20px; text-align: center; border-top: 2px solid var(--orange); margin-top: 40px; }
-        .footer-links { margin-bottom: 15px; }
-        .footer-links a { color: var(--text); text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
-        .footer-links a:hover { color: var(--orange); }
-        .copyright { color: #666; font-size: 0.8rem; }
+        .container { padding: 20px; max-width: 900px; margin: auto; }
+        .card { background: #111; border-radius: 15px; border-right: 5px solid #ff5722; padding: 20px; margin-bottom: 20px; transition: 0.3s; cursor: pointer; text-decoration: none; display: block; color: inherit; }
+        .card:hover { transform: scale(1.02); background: #1a1a1a; }
+        .card h2 { color: #ff5722; margin-top: 0; }
+        .tags { color: #888; font-size: 0.9rem; margin-top: 10px; }
+        footer { background: #111; padding: 20px; text-align: center; font-size: 0.9rem; border-top: 1px solid #333; margin-top: 40px; }
+        footer a { color: #ff5722; text-decoration: none; margin: 0 10px; }
     </style>
 </head>
 <body>
 
-<header>🛠️ بـريكـولاتي - Bricolati</header>
+<header>Bricolati | بـريكـولاتي</header>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.
+
+cat <<EOF > index.html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بـريكـولاتي | صيانة الأدوات الكهربائية</title>
+    <style>
+        body { font-family: sans-serif; background: #000; color: #fff; margin: 0; padding: 0; text-align: right; }
+        header { background: #ff5722; padding: 25px; text-align: center; font-size: 2rem; font-weight: bold; }
+        nav { background: #111; padding: 12px; text-align: center; border-bottom: 3px solid #ff5722; }
+        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        .container { padding: 20px; max-width: 800px; margin: auto; }
+        .card { background: #111; border-radius: 15px; border-right: 6px solid #ff5722; padding: 20px; margin-bottom: 25px; display: block; text-decoration: none; color: inherit; transition: 0.3s; }
+        .card:hover { background: #1a1a1a; transform: scale(1.01); }
+        .card h2 { color: #ff5722; margin-top: 0; }
+        footer { background: #111; padding: 25px; text-align: center; border-top: 1px solid #333; margin-top: 50px; }
+        footer a { color: #ff5722; text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+<header>Bricolati | بـريكـولاتي</header>
 
 <nav>
     <a href="index.html">الرئيسية</a>
@@ -32,28 +57,22 @@
 </nav>
 
 <div class="container">
-    <div class="post-card">
-        <h2>أحدث المقالات التقنية</h2>
-        <p>مرحباً بك في مدونة بـريكـولاتي. هنا نشاركك خبرة سنوات في صيانة الأدوات الكهربائية وإصلاح البطاريات بطرق علمية وصحيحة.</p>
+    <div class="card" style="cursor: default;">
+        <h2>مرحباً بك في ورشة بـريكـولاتي الرقمية</h2>
+        <p>نحن هنا لنشاركك أسرار صيانة الأدوات الكهربائية والبطاريات، ونرشدك لأفضل المعدات التقنية.</p>
     </div>
-    
-    <div class="post-card">
-        <h2><a href="battery-tips.html" style="text-decoration:none; color:inherit;">صيانة أدوات AliExpress: الدليل الشامل</a></h2>
-        <p>كيف تختار الأدوات المناسبة من AliExpress وكيف تقوم بصيانتها دورياً لضمان عمر أطول...</p>
-        <small>التاجات: #صيانة #AliExpress #إلكترونيات #بطاريات #أدوات</small>
-    </div>
+
+    <a href="battery-tips.html" class="card">
+        <h2>أسرار صيانة بطاريات الليثيوم (دليل الحرفيين)</h2>
+        <p>تعلم كيف تحافظ على بطاريات الدريل والمعدات اللاسلكية لتدوم معك طويلاً. اضغط هنا لقراءة المقال بالكامل...</p>
+        <div style="color:#888; font-size:0.9rem; margin-top:10px;">#بطاريات #صيانة #AliExpress</div>
+    </a>
 </div>
 
 <footer>
-    <div class="footer-links">
-        <a href="about.html">من نحن</a> | 
-        <a href="privacy.html">سياسة الخصوصية</a> | 
-        <a href="terms.html">الشروط والقوانين</a> | 
-        <a href="contact.html">اتصل بنا</a>
-    </div>
-    <div class="copyright">
-        جميع الحقوق محفوظة © 2026 بـريكـولاتي - ورشة الدروة الرقمية
-    </div>
+    <p>© 2026 بـريكـولاتي - جميع الحقوق محفوظة</p>
+    <a href="privacy.html">سياسة الخصوصية</a> | 
+    <a href="terms.html">الشروط والقوانين</a>
 </footer>
 
 </body>

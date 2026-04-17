@@ -1,0 +1,13 @@
+backend:
+  name: github
+  repo: Shoppress19/atadtools
+  branch: main
+media_folder: "images"
+collections:
+  - name: "posts"
+    label: "المقالات"
+    folder: "content/posts"
+    create: true
+    fields:
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "الوصف", name: "body", widget: "markdown"}

@@ -18,6 +18,17 @@
         .card p { color: #bbb; font-size: 14px; line-height: 1.6; margin: 0; }
     </style>
 </head>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 <body>
 <header>
     <div class="bricolati-logo">
